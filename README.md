@@ -50,9 +50,9 @@ O projeto inclui:
 - Aplicação de modelos:
 
 ### Modelos testados:
-- **Regressão Logística**  
-- **Random Forest**  
-- **XGBoost** (se aplicável)  
+- Regressão Logística
+- Random Forest  
+- Decision Tree  
 
 ### Métricas avaliadas:
 - Acurácia  
