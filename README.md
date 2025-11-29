@@ -69,7 +69,7 @@ O projeto inclui:
 ```bash
 tc4final/
 
-│── MachineLearning/            # Analise exploratoria, tratamento dos dados, comparações entre modelos de ML
+│── MachineLearning/            # Análise exploratória, tratamento dos dados, comparações entre modelos de ML
 │   └── Algoritmo.ipynb
 │
 │── assets/                     # Imagens e arquivos auxiliares
