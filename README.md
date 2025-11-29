@@ -96,8 +96,8 @@ As principais dependências estão no arquivo requirements.txt.
 
 
 # 👨‍💻 Autores
-Bryan
-Gustavo
-Luiz
-Pedro
-Vitor Bomura(https://github.com/vbomura)
+- Bryan
+- Gustavo
+- Luiz
+- Pedro
+- Vitor Bomura(https://github.com/vbomura)
