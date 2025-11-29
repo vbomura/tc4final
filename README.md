@@ -66,23 +66,24 @@ O projeto inclui:
 
 # 📁 Estrutura do Projeto
 
+```bash
 tc4final/
-│── assets/ # Imagens e arquivos auxiliares
-│ └── grafico.png
+│── assets/                     # Imagens e arquivos auxiliares
+│   └── grafico.png
 │
-│── tools/ # arquivo para utilização de Pipeline e joblib
-│ ├── RandomForest.joblib
-│ ├── utils.py
+│── tools/                      # Arquivos para Pipeline e modelos salvos
+│   ├── RandomForest.joblib
+│   └── utils.py
 │
-│── modules/ # Lógica das páginas do Streamlit
-│ ├── dashboard.py
-│ ├── imagem.py
-│ ├── pesquisa.py
-│ └── sobre.py
+│── modules/                    # Lógica das páginas do Streamlit
+│   ├── dashboard.py
+│   ├── imagem.py
+│   ├── pesquisa.py
+│   └── sobre.py
 │
-│── main.py # Entrada principal da aplicação Streamlit
-│── requirements.txt # Dependências do projeto
-│── README.md # Este arquivo
+│── main.py                     # Arquivo principal da aplicação Streamlit
+│── requirements.txt            # Dependências do projeto
+│── README.md                   # Documentação do repositório
 
 
 📦 Requisitos
