@@ -84,7 +84,7 @@ tc4final/
 │── main.py                     # Arquivo principal da aplicação Streamlit
 │── requirements.txt            # Dependências do projeto
 │── README.md                   # Documentação do repositório
-'''
+```
 
 📦 Requisitos
 
