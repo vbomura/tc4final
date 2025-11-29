@@ -86,12 +86,12 @@ tc4final/
 │── README.md                   # Documentação do repositório
 ```
 
-📦 Requisitos
+# 📦 Requisitos
 
 As principais dependências estão no arquivo requirements.txt.
 
 
-👨‍💻 Autores
+# 👨‍💻 Autores
 Bryan
 Gustavo
 Luiz
