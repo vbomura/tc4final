@@ -97,7 +97,7 @@ As principais dependências estão no arquivo requirements.txt.
 
 # 👨‍💻 Autores
 - Bryan (https://github.com/BryanTieteTanoue)
-- Gustavo
+- Gustavo (https://github.com/Nadaguty)
 - Luiz (https://github.com/LFAJOGA5)
 - Pedro (https://github.com/PedroBaradel)
 - Vitor (https://github.com/vbomura)
