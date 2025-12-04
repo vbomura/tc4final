@@ -4,7 +4,7 @@ def app():
     st.markdown("""
 ## Bem-vindo ao Sistema de Predição de Obesidade
 
-Este sistema foi desenvolvido para realizar previsões relacionadas aos níveis de obesidade, utilizando a base de dados fornecida no módulo do **Tech Challenge – Fase 4 (FIAP)**.
+Este sistema foi desenvolvido para realizar previsões relacionadas aos níveis de obesidade, utilizando a base de dados fornecida no módulo do **Tech Challenge – Fase 4 (FIAP) - 9DTAT**.
 
 ### O que você encontrará aqui?
 - 📝 **Questionário sobre nível de obesidade**
