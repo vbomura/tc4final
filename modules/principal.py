@@ -13,4 +13,12 @@ Este sistema foi desenvolvido para realizar previsões relacionadas aos níveis 
 - ⚙️ **Ferramenta de predição** para estimar o nível de obesidade  
 
 O objetivo é fornecer uma visão clara, acessível e completa de como os dados foram analisados e como a previsão foi construída.
+
+
+# 👨‍💻 Autores
+- Bryan (https://github.com/BryanTieteTanoue)
+- Gustavo (https://github.com/Nadaguty)
+- Luiz (https://github.com/LFAJOGA5)
+- Pedro (https://github.com/PedroBaradel)
+- Vitor (https://github.com/vbomura)
 """)
