@@ -12,28 +12,37 @@ def app():
     #importando base (alterar para caminho do GIT)
     base = pd.read_csv(r"https://raw.githubusercontent.com/vbomura/TC4Final/refs/heads/main/arquivos/Obesity.csv", sep=',')
 
-    st.set_page_config(page_title="Levantamento sobre dados de obesidade")
-    st.title("Levantamento sobre dados de obesidade")
+    st.set_page_config(page_title="Levantamento dos dados do paciente")
+    st.title("Levantamento dos dados do paciente")
 
-    st.write('# Pesquisa sobre obesidade')
+    #st.write('# Pesquisa sobre obesidade')
+    st.warning("Aviso este é um algoritimo de predição, não substitui diagnostico/exame de um profissional. Em caso de dúvida o procure.")
 
     #Age
-    input_idade = float(st.slider('Selecione sua idade:', 14, 61))
+    #input_idade = float(st.slider('Selecione sua idade:', 14, 61))
+    input_idade = st.number_input(
+            "Insira sua Idade (anos)",
+            min_value=15,      # idade minima
+            max_value=100,     # idade maxima
+            value=25,         # Valor padrão
+            step=1            # Passo de 1
+        )
+
 
     #Weight
     input_peso = st.number_input(
         "Insira seu peso (em kg)",
-        min_value=50,      # Altura mínima razoável
+        min_value=10,      # Altura mínima razoável
         max_value=300,     # Altura máxima razoável
         value=80,         # Valor padrão
         step=1            # Passo de 1 kg
     )
 
     #family_history
-    input_historico = st.radio('Histórico familiar de excesso de peso?',["***Sim***","***Não***"])
+    input_historico = st.radio('Tem histórico familiar de excesso de peso?',["***Sim***","***Não***"])
 
     #CAEC
-    input_lanches = st.selectbox('Consumo de lanches entre as refeições?', ("Selecione...", "Não consome", "Às vezes", "Frequentemente", "Sempre"))
+    input_lanches = st.selectbox('Qual a frequencia de consumo de lanches entre as refeições?', ("Selecione...", "Não consome", "Às vezes", "Frequentemente", "Sempre"))
 
 
     ##Perguntas não utilizadas se for utilziar no futuro, terá que ajustar a variavel no objeto que é criado apos clicar no botão
@@ -126,8 +135,9 @@ def app():
         5: "obesidade II",                # Obesity_Type_II
         6: "obesidade III"                # Obesity_Type_III
     }
+    
 
-    if st.button("Adicionar Pesquisa"):
+    if st.button("Fazer Predição"):
 
         campos_invalidos = []
 
@@ -200,37 +210,37 @@ def app():
 
             # Mostra resultado
             #st.write("**Lista tratada:**", nova_pesquisa)
-            st.write("**Resultado da predição:**", predicaoGerada)
-            st.write("**Obesidade:**", map_obesidade[predicaoGerada])
+            #st.write("**Resultado da predição:**", predicaoGerada)
+            #st.write("**Obesidade:**", map_obesidade[predicaoGerada])
 
             # Tratamento das mensagens
             if predicaoGerada == 0:
-                st.warning("Você está abaixo do peso. É importante avaliar se existe alguma causa nutricional ou metabólica.")
-                st.info("Busque auxílio nutricional para alcançar um peso saudável.")
+                st.warning("""Risco alto de estar abaixo do peso. É importante avaliar se existe alguma causa nutricional ou metabólica. \
+                \n\n Busque auxílio nutricional para alcançar um peso saudável.""")
 
             elif predicaoGerada == 1:
-                st.success("Parabéns! Você está dentro do peso considerado saudável.")
-                st.info("Continue mantendo bons hábitos alimentares e atividade física!")
+                st.success("""Parabéns! Você aparenta estar dentro do peso considerado saudável. \
+                \n\n Continue mantendo bons hábitos alimentares e atividade física! Mas não se esqueça de consultar um médico.""")
 
             elif predicaoGerada == 2:
-                st.warning("Atenção: você está em sobrepeso nível I.")
-                st.info("Revisar alimentação e aumentar atividades físicas pode ajudar.")
+                st.warning("""Risco alto de sobrepeso nível I. \
+                \n\n Revisar alimentação e aumentar atividades físicas pode ajudar.""")
 
             elif predicaoGerada == 3:
-                st.warning("Atenção: você está em sobrepeso nível II.")
-                st.info("Pode ser um bom momento para acompanhamento nutricional.")
+                st.warning("""Risco alto de sobrepeso nível II. \
+                \n\n Pode ser um bom momento para acompanhamento profissional.""")
 
             elif predicaoGerada == 4:
-                st.error("Risco alto: obesidade nível I.")
-                st.info("Procure orientação profissional para reduzir riscos à saúde.")
+                st.error("""Risco alto de obesidade nível I. \
+                \n\n Procure orientação profissional para reduzir riscos à saúde.""")
 
             elif predicaoGerada == 5:
-                st.error("Risco muito alto: obesidade nível II.")
-                st.warning("Mudanças de estilo de vida e acompanhamento médico são importantes.")
+                st.error("""Risco alto de obesidade nível II. \
+                \n\n Mudanças de estilo de vida e acompanhamento médico são importantes.""")
 
             elif predicaoGerada == 6:
-                st.error("Risco crítico: obesidade nível III.")
-                st.warning("Recomendado acompanhamento médico especializado.")
+                st.error("""Risco alto de obesidade nível III. \
+                \n\n Recomendado acompanhamento médico especializado.""")
 
             else:
                 st.error("Erro na criação da predição para estes valores, por favor realizar uma nova consulta.")

@@ -338,6 +338,8 @@ def app():
         fig5.update_yaxes(title_text="Calorias")
         fig5.update_xaxes(title_text="Nível de Peso")
         
+        fig5.update_yaxes(range=[0, 380])
+
         fig5.update_xaxes(
             categoryorder="array",
             categoryarray=[

@@ -14,12 +14,10 @@ def app():
     #exmplo:
     #dados = pd.read_csv('https://raw.githubusercontent.com/alura-tech/alura-tech-pos-data-science-credit-scoring-streamlit/main/df_clean.csv')
 
-    st.set_page_config(page_title="Levantamento sobre dados de obesidade")
+    st.set_page_config(page_title="Levantamento dos dados do paciente")
     st.title("Levantamento sobre dados de obesidade")
 
-    st.write('# Pesquisa sobre obesidade')
-
-
+    #st.write('# Pesquisa sobre obesidade')
     #Gender
     st.write('### Por favor, preencher os dados da Pesquisa:')
     input_genero = st.radio('Selecione o Sexo:',["***Masculino***","***Feminino***"])
