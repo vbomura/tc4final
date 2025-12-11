@@ -13,7 +13,7 @@ A aplicação está publicada online e acessível aqui:
 
 O objetivo principal deste trabalho é:
 
-- Realizar análises gráficas e estatísticas sobre fatores relacionados à **obesidade**
+- Realizar análises gráficas e estatísticas sobre fatores relacionados ao peso
 - Construir modelos de **Machine Learning** que podem identificar padrões
 - Criar uma interface interativa em **Streamlit** para facilitar o uso por qualquer usuário
 
@@ -80,9 +80,9 @@ tc4final/
 │   └── utils.py
 │
 │── modules/                    # Lógica das páginas do Streamlit
-│   ├── dashboard.py
-│   ├── imagem.py
-│   ├── pesquisa.py
+│   ├── dashboard.py            # Insights levantados na analise dos dados
+│   ├── imagem.py               # Informações sobre a predição utilizada
+│   ├── pesquisa.py             # Tela para preenchimento de informações e utilização da predição
 │   └── sobre.py
 │
 │── main.py                     # Arquivo principal da aplicação Streamlit
