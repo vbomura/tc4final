@@ -83,9 +83,8 @@ tc4final/
 │   ├── dashboard.py            # Insights levantados na analise dos dados
 │   ├── imagem.py               # Informações sobre a predição utilizada
 │   ├── pesquisa.py             # Tela para preenchimento de informações e utilização da predição
-│   └── sobre.py
 │
-│── main.py                     # Arquivo principal da aplicação Streamlit
+│── main.py                     # Arquivo principal da aplicação Streamlit/Boas Vindas
 │── requirements.txt            # Dependências do projeto
 │── README.md                   # Documentação do repositório
 ```
