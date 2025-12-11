@@ -19,7 +19,7 @@ def app():
     st.warning("Aviso este é um algoritimo de predição, não substitui diagnostico/exame de um profissional. Em caso de dúvida o procure.")
 
     #Age
-    #input_idade = float(st.slider('Selecione sua idade:', 14, 61))
+    #input_idade = float(st.slider('Selecione sua idade:', 15, 100))
     input_idade = st.number_input(
             "Insira sua Idade (anos)",
             min_value=15,      # idade minima
@@ -28,12 +28,21 @@ def app():
             step=1            # Passo de 1
         )
 
+    #Height
+    input_altura = st.number_input(
+        "Insira sua altura (em cm)",
+        min_value=50,      # Altura mínima
+        max_value=300,     # Altura máxima
+        value=170,         # Valor padrão
+        step=1,            # Passo de 1 cm
+        format="%d"        # Garante que o valor seja um inteiro
+    )
 
     #Weight
     input_peso = st.number_input(
         "Insira seu peso (em kg)",
-        min_value=10,      # Altura mínima razoável
-        max_value=300,     # Altura máxima razoável
+        min_value=10,      # Peso mínima
+        max_value=300,     # Peso máxima
         value=80,         # Valor padrão
         step=1            # Passo de 1 kg
     )
@@ -49,17 +58,6 @@ def app():
     ##Gender
     #st.write('### Por favor, preencher os dados da Pesquisa:')
     #input_genero = st.radio('Selecione o Sexo:',["***Masculino***","***Feminino***"])
-
-    #Height
-    """     input_altura = st.number_input(
-        "Insira sua altura (em cm)",
-        min_value=50,      # Altura mínima razoável
-        max_value=300,     # Altura máxima razoável
-        value=170,         # Valor padrão
-        step=1,            # Passo de 1 cm
-        format="%d"        # Garante que o valor seja um inteiro
-    ) """
-
 
     ##FAVC
     #input_alimento_calorico = st.radio('Consumo frequente de alimentos muito calóricos?',["***Sim***","***Não***"])
