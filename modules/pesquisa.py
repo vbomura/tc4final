@@ -167,7 +167,7 @@ def app():
             nova_pesquisa = [
                 "Male",# sexo_num,
                 input_idade,
-                0, #input_altura,
+                input_altura,
                 input_peso,
                 historico_num,
                 "no",#calorico_num,
@@ -197,10 +197,10 @@ def app():
             #teste_novo_paciente = teste_novo_paciente.loc[:, teste_novo_paciente.columns.difference(['historico_familiar_cod','calorias_frequente_cod','fuma_cod','genero','vegetais_refeicao', 'entre_refeicao','frequencia_alcool','nvl_obsidade','entre_refeicao_ord','frequencia_alcool_ord'])]
 
             #Deixando somente dados que são utilizados na predição
-            cliente_pred = teste_novo_paciente[['peso','historico_familiar_cod', 'idade', 'calorias_frequente_cod', 'entre_refeicao_ord']]
+            cliente_pred = teste_novo_paciente[['peso','historico_familiar_cod', 'idade', 'calorias_frequente_cod', 'entre_refeicao_ord', 'altura']]
 
 
-            model = joblib.load('tools/RandomForest.joblib')
+            model = joblib.load('tools/RandomForest2.joblib')
             final_pred = model.predict(cliente_pred)
 
             predicaoGerada=-1
