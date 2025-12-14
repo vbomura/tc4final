@@ -16,4 +16,4 @@ def app():
                                 
     """)
 
-    st.image("assets/Grafico.png", caption="")
+    st.image("assets/Grafico2.png", caption="")
