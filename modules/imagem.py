@@ -13,7 +13,7 @@ def app():
 
         Entrando em mais detalhes sobre o resultado, Decion Tree apresentou uma precisão muito boa em todos as faixas de peso, se mantendo acima 90% em todas as faixas. Sua taxa de recall, ou seja, falsos positivos, também foi muito boa, mostrando que o algoritmo consegue classificar com eficácia cada categoria.
         
-        Embora o algoritmo tenha apresentado excelentes resultados é sempre bom relembrar que a avaliação de um profissional de saúde é essencial. Além disso, como mostrado no dashbord, outros fatores que não estão na pesquisa podem influencia a faixa de peso de um paciente, recomenda-se analisar eles também.
+        Embora o algoritmo tenha apresentado excelentes resultados é sempre bom relembrar que a avaliação de um profissional de saúde é essencial. Além disso, como mostrado no dashboard, outros fatores que não estão na pesquisa podem influenciar a faixa de peso de um paciente, recomenda-se analisar eles também.
     
                 
     """)
