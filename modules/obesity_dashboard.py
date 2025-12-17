@@ -172,7 +172,7 @@ def app():
             x="nivel_peso",
             color="genero",
             barmode="group",
-            title="Distribuição de Níveis de Obesidade por Gênero",
+            title="Distribuição de Níveis de Peso por Gênero",
             color_discrete_sequence=["#F28482", "#A8DADC"] # azul claro e rosa claro
         )
 
