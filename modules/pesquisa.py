@@ -53,14 +53,15 @@ def app():
     #CAEC
     input_lanches = st.selectbox('Qual a frequencia de consumo de lanches entre as refeições?', ("Selecione...", "Não consome", "Às vezes", "Frequentemente", "Sempre"))
 
+    #FAVC
+    input_alimento_calorico = st.radio('Consumo frequente de alimentos muito calóricos?',["***Sim***","***Não***"])
+
 
     ##Perguntas não utilizadas se for utilziar no futuro, terá que ajustar a variavel no objeto que é criado apos clicar no botão
     ##Gender
     #st.write('### Por favor, preencher os dados da Pesquisa:')
     #input_genero = st.radio('Selecione o Sexo:',["***Masculino***","***Feminino***"])
 
-    ##FAVC
-    #input_alimento_calorico = st.radio('Consumo frequente de alimentos muito calóricos?',["***Sim***","***Não***"])
 
     ##FCVC
     #input_vegetais = st.selectbox('Frequência de consumo de vegetais nas refeições?', ("Selecione...", "Raramente", "Às vezes", "Sempre"))
@@ -161,6 +162,7 @@ def app():
             # Conversão dos campos
             historico_num = map_binario[input_historico]
             lanches_num = map_lanches[input_lanches]
+            calorico_num = map_binario[input_alimento_calorico]
             # Monta lista final tratada
 
             #Criando objeto de acordo com a planilha base
@@ -170,7 +172,7 @@ def app():
                 input_altura,
                 input_peso,
                 historico_num,
-                "no",#calorico_num,
+                calorico_num,
                 1,#vegetais_num,
                 1,#input_refeicoes,
                 lanches_num,
